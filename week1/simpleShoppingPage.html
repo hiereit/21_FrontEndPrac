@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <title>SNSD_Concert</title>
+
+    <style>
+        @font-face {
+            font-family: 'EliceDigitalBaeum_Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            font-family: 'EliceDigitalBaeum_Bold';
+        }
+        .wrap {
+            width:450px;
+            margin:20px auto 20px auto;
+            padding: 5px;
+
+            border: 2px double darkgrey;
+            border-radius: 3px;
+        }
+        .albumImg{
+            width:100%;
+            margin:auto;
+            display:block;
+        }
+        a:hover{
+            color:#c60063;
+        }
+        .itemTitle{
+            color:#FF69B4;
+        }
+        h4{
+            display: inline;
+        }
+        .orderBtn{
+            margin:auto;
+            display: block;
+        }
+        .priceSpan{
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        function clickOrder(){
+            alert('주문 완료!')
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <img class="albumImg"
+             src="https://pds.joongang.co.kr//news/component/htmlphoto_mmdata/201710/11/f5c58ddf-b617-44c0-aa23-e70da084bbcf.jpg"><br>
+        <h4>[공연] <a class="itemTitle" href="https://www.smentertainment.com/Entertainment/ArtistProfile/305?Code=&Page=">소녀시대 ‘Holiday Night’</a></h4>
+         &nbsp <span class="priceSpan">가격:90,000</span>
+        <p><br>
+            K-Pop 여왕의 귀환!<br>
+            15주년 기념 다채로운 무대, 즐겨보세요!<br>
+            소녀시대, 코로나 이후 첫 콘서트 ‘Holiday Night’!<br>
+        </p>
+
+        <!--폼폼-->
+        <div>
+            <!--주문자이름입력-->
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">이름</span>
+                </div>
+                <input type="text" class="form-control" placeholder="주문자 이름을 입력하세요" aria-label="Username"
+                       aria-describedby="basic-addon1">
+            </div>
+            <!--좌석 dropdown-->
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">좌석</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>-- 좌석을 선택하세요 --</option>
+                    <option value="1">스탠딩석 (+60,000)</option>
+                    <option value="2">2층 (+30,000)</option>
+                    <option value="3">3층 (+0)</option>
+                </select>
+            </div>
+            <!--주소 입력-->
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon2">주소</span>
+                </div>
+                <input type="text" class="form-control" placeholder="티켓을 수령할 주소를 입력하세요" aria-label="Username"
+                       aria-describedby="basic-addon2">
+            </div>
+            <!--버튼-->
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon3">전화번호</span>
+                </div>
+                <input type="text" class="form-control" placeholder="전화번호를 입력하세요" aria-label="Username"
+                       aria-describedby="basic-addon3">
+            </div>
+            <button type="submit" onclick="clickOrder()" class="orderBtn btn btn-outline-danger">주문하기</button>
+        </div>
+    </div>
+</body>
+</html>
